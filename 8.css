@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(270deg, #000428, #004e92);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    z-index: 2;
+}
+
+#year {
+    font-size: 100px;
+    animation: glow 2s infinite alternate;
+}
+
+.text {
+    font-size: 40px;
+    margin: 20px 0;
+    animation: bounce 1.5s infinite;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff5722;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px #00eaff;
+    }
+    to {
+        text-shadow: 0 0 40px #ff00ff;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
